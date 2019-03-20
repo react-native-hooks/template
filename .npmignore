@@ -7,3 +7,4 @@ _tests_
 coverage
 example
 yarn.lock
+yalc.lock
