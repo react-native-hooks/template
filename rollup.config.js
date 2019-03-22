@@ -1,3 +1,4 @@
+/* eslint-disable flowtype/require-valid-file-annotation, no-console, import/extensions */
 import nodeResolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 import commonjs from 'rollup-plugin-commonjs';
@@ -67,7 +68,7 @@ const configBase = {
 };
 
 const globals = {
-  react: 'React', 'react-native': 'reactNative'
+  react: 'React', 'react-native': 'reactNative',
 };
 
 const standaloneBaseConfig = {

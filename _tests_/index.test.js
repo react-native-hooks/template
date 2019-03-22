@@ -1,4 +1,4 @@
-import sampleRNHooks from '../src'
+import sampleRNHooks from '../src';
 
 describe('Test Template function', () => {
   it('should be a function', () => {
@@ -6,4 +6,4 @@ describe('Test Template function', () => {
       typeof sampleRNHooks,
     ).toBe('function');
   });
-})
+});
