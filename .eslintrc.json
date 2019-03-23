@@ -1,10 +1,14 @@
 {
-  "extends": "airbnb",
-  "parser": "babel-eslint",
-  "plugins": [
-    "react-native",
-    "jest"
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:prettier/recommended",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard"
   ],
+  "parser": "babel-eslint",
+  "plugins": ["react-native", "jest", "prettier"],
   "env": {
     "jest": true
   },
@@ -13,7 +17,7 @@
     "react/no-string-refs": "off",
     "no-underscore-dangle": "off",
     "no-unused-vars": ["error", { "argsIgnorePattern": "(state|dispatch)" }],
-    "new-cap": ["error", {"capIsNewExceptions": ["Immutable"]}],
+    "new-cap": ["error", { "capIsNewExceptions": ["Immutable"] }],
     "import/no-extraneous-dependencies": "off",
     "no-console": "off",
     "react/jsx-filename-extension": "off",
@@ -22,7 +26,10 @@
     "react/forbid-prop-types": "off",
     "class-methods-use-this": "off",
     "react/no-unused-prop-types": "warn",
-    "react/prefer-stateless-function": ["error", {"ignorePureComponents": true}],
+    "react/prefer-stateless-function": [
+      "error",
+      { "ignorePureComponents": true }
+    ],
     "react/require-default-props": "off"
   }
 }

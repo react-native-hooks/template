@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 
-function sampleRNHook() {
-
-}
+function sampleRNHook() {}
 
 export default sampleRNHook;
