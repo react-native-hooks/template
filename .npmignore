@@ -6,5 +6,4 @@ _tests_
 *.log
 coverage
 example
-yarn.lock
 yalc.lock
