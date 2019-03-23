@@ -32,12 +32,18 @@ const commonPlugins = [
     babelrc: false,
     exclude: 'node_modules/**',
     presets: [['@babel/env', { loose: true, modules: false }], '@babel/react'],
-    plugins: ['@babel/plugin-proposal-class-properties', ['module-resolver', {
-      root: ['./'],
-      alias: {
-        _tests_: './_tests_',
-      },
-    }]],
+    plugins: [
+      '@babel/plugin-proposal-class-properties',
+      [
+        'module-resolver',
+        {
+          root: ['./'],
+          alias: {
+            _tests_: './_tests_',
+          },
+        },
+      ],
+    ],
   }),
   commonjs({
     namedExports: {
@@ -63,12 +69,14 @@ const configBase = {
   input: './src/index.js',
 
   // \0 is rollup convention for generated in memory modules
-  external: id => !id.startsWith('\0') && !id.startsWith('.') && !id.startsWith('/'),
+  external: id =>
+    !id.startsWith('\0') && !id.startsWith('.') && !id.startsWith('/'),
   plugins: commonPlugins,
 };
 
 const globals = {
-  react: 'React', 'react-native': 'reactNative',
+  react: 'React',
+  'react-native': 'reactNative',
 };
 
 const standaloneBaseConfig = {
@@ -119,8 +127,4 @@ const nativeConfig = {
   ],
 };
 
-export default [
-  standaloneConfig,
-  standaloneProdConfig,
-  nativeConfig,
-];
+export default [standaloneConfig, standaloneProdConfig, nativeConfig];
